@@ -1,0 +1,5 @@
+
+db:
+  root: /Database
+  pre_dir: scripts
+  post_dir: scripts
