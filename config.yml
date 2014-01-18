@@ -1,5 +1,8 @@
 
+generic:
+  deploy_dir: ../_deploy
+
 db:
-  root: /Database
+  root: ../projects/Database
   pre_dir: scripts
   post_dir: scripts
