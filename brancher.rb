@@ -28,9 +28,9 @@ def combine_config_files(path)
 
     feature = YAML.load_file(e).to_hash
 
-    combined[:pre] += feature["pre"]
-    combined[:sprocs] += feature["sprocs"]
-    combined[:post] += feature["post"] unless feature["post"] == nil
+    combined[:pre] += feature["pre"] if feature["pre"]
+    combined[:sprocs] += feature["sprocs"] if feature["sprocs"]
+    combined[:post] += feature["post"] if feature["post"]
 
   end
 
