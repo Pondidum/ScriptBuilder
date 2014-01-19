@@ -13,7 +13,10 @@ def find_latest_deploy
 
 end
 
-def combine_config_files(files)
+def combine_config_files(path)
+
+  deploy = File.join(path, '*.yml')
+  files = Dir.glob(deploy)
 
   combined = Hash.new
 
@@ -35,13 +38,4 @@ def combine_config_files(files)
 
 end
 
-def list_files_features
-
-  deploy = find_latest_deploy + '/*.yml'
-  configs = Dir.glob(deploy)
-
-  combine_config_files(configs)
-
-end
-
-list_files_features
+combine_config_files(find_latest_deploy)
