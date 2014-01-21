@@ -51,7 +51,7 @@ def build_sql_file(masterfeature)
   postRoot = File.join(base, db["post_dir"])
 
   output = StringIO.new
-  output << "Pre Scripts:\n"
+  output << "--Pre Scripts:\n"
   output << "--------------------------------------------------------------------------------\n"
 
   masterfeature[:pre].each { |file|
@@ -61,7 +61,7 @@ def build_sql_file(masterfeature)
 
   }
 
-  output << "Sprocs Scripts:\n"
+  output << "--Sprocs Scripts:\n"
   output << "--------------------------------------------------------------------------------\n"
 
   masterfeature[:sprocs].each { |file|
@@ -71,7 +71,7 @@ def build_sql_file(masterfeature)
 
   }
 
-  output << "Post Scripts:\n"
+  output << "--Post Scripts:\n"
   output << "--------------------------------------------------------------------------------\n"
 
   masterfeature[:post].each { |file|
